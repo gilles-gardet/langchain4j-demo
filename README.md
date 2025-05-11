@@ -5,13 +5,13 @@ The goal of this project is to:
 - [x] implement a little chat UI with vaadin
 - [x] test and use a local LLM with the help of langchain4j
 - [x] implement some RAG using qdrant as vectorial db
-- [x] integrate a call to an external API with a LCM
-- [x] integrate a call to a database with a LCM
-- [x] integrate a call to the GitHub LCM Server (docker + openai LLM)
+- [x] integrate a call to an external API with a MCP
+- [x] integrate a call to a database with a MCP
+- [x] integrate a call to the GitHub MCP Server (docker + openai LLM)
 
 To be noticed that 3 LLMs will be used:
 
-- *GPT-4* as our chat model (which supports MCP tools and suits well for the GitHub LCM server)
+- *GPT-4* as our chat model (which supports MCP tools and suits well for the GitHub MCP server)
 - *qwen3* as our chat model (which supports MCP tools but is pretty limited and resource hungry)
 - *nomic* as our embedding model (to generate the embeddings for the vectorial db)
 
@@ -53,7 +53,7 @@ mvn spring-boot:run -pl mcp-server # start the MCP server
 > To run the project with the OpenAI LLM, you need to set the `OPENAI_API_KEY` environment variable with the content of
 > your OpenAI API key.  
 > You will also need to set `GITHUB_PERSONAL_ACCESS_TOKEN` with a GitHub Personal Access Token (PAT) to interact with
-> the GitHub LCM server.
+> the GitHub MCP server.
 
 If needed you can also do a `mvn compile -DskipTests` before to re-compile the project.  
 A chat window should be available at **localhost:8080** (client) and the MCP server at **localhost:8081**.
